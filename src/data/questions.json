@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "question": "What is React?",
+    "options": [
+      "A library for building user interfaces",
+      "A database",
+      "A programming language",
+      "A type of server"
+    ],
+    "answerIndex": 0,
+    "concept": "React Basics"
+  },
+  {
+    "id": 2,
+    "question": "Which hook is used for side effects in React?",
+    "options": ["useState", "useEffect", "useContext", "useReducer"],
+    "answerIndex": 1,
+    "concept": "React Hooks"
+  },
+  {
+    "id": 3,
+    "question": "What TypeScript keyword is used to define a new type?",
+    "options": ["interface", "type", "class", "enum"],
+    "answerIndex": 1,
+    "concept": "TypeScript Types"
+  }
+]
