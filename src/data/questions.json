@@ -103,5 +103,425 @@
     ],
     "answerIndex": 2,
     "concept": "TypeScript & Props"
+  },
+  {
+    "id": 11,
+    "question": "Which lifecycle method is used to fetch data after a component mounts in React class components?",
+    "options": [
+      "componentDidMount",
+      "componentWillMount",
+      "componentDidUpdate",
+      "componentWillUnmount"
+    ],
+    "answerIndex": 0,
+    "concept": "React Lifecycle"
+  },
+  {
+    "id": 12,
+    "question": "What does the 'key' prop help React identify?",
+    "options": [
+      "Which items have changed, are added, or are removed",
+      "The parent component",
+      "The component's state",
+      "The component's props"
+    ],
+    "answerIndex": 0,
+    "concept": "React Lists"
+  },
+  {
+    "id": 13,
+    "question": "Which command initializes a new npm project?",
+    "options": ["npm init", "npm start", "npm install", "npm new"],
+    "answerIndex": 0,
+    "concept": "npm Basics"
+  },
+  {
+    "id": 14,
+    "question": "How do you export a function from a JavaScript file?",
+    "options": [
+      "export function myFunc() {}",
+      "module.exports = myFunc",
+      "Both A and B",
+      "export default myFunc()"
+    ],
+    "answerIndex": 2,
+    "concept": "JS Modules"
+  },
+  {
+    "id": 15,
+    "question": "Which operator is used to spread the properties of an object?",
+    "options": ["...", "===", "=>", "??"],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 16,
+    "question": "What does the useContext hook do in React?",
+    "options": [
+      "Accesses context values",
+      "Updates state",
+      "Performs side effects",
+      "Creates a new context"
+    ],
+    "answerIndex": 0,
+    "concept": "React Hooks"
+  },
+  {
+    "id": 17,
+    "question": "Which of the following is NOT a valid CSS selector?",
+    "options": [".className", "#idName", "elementName", "$variable"],
+    "answerIndex": 3,
+    "concept": "CSS Selectors"
+  },
+  {
+    "id": 18,
+    "question": "How do you comment a single line in JavaScript?",
+    "options": ["// comment", "/* comment */", "# comment", "<!-- comment -->"],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 19,
+    "question": "Which method is used to add an element to the end of an array in JavaScript?",
+    "options": ["push()", "pop()", "shift()", "unshift()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 20,
+    "question": "What does the 'as' keyword do in TypeScript?",
+    "options": [
+      "Type assertion",
+      "Import a module",
+      "Export a variable",
+      "Declare a function"
+    ],
+    "answerIndex": 0,
+    "concept": "TypeScript Syntax"
+  },
+  {
+    "id": 21,
+    "question": "Which HTML tag is used to create a hyperlink?",
+    "options": ["<a>", "<link>", "<href>", "<hyperlink>"],
+    "answerIndex": 0,
+    "concept": "HTML Basics"
+  },
+  {
+    "id": 22,
+    "question": "What is the default port for a React development server?",
+    "options": ["3000", "8080", "5000", "80"],
+    "answerIndex": 0,
+    "concept": "React Basics"
+  },
+  {
+    "id": 23,
+    "question": "Which command creates a new React app using Create React App?",
+    "options": [
+      "npx create-react-app my-app",
+      "npm install react",
+      "npm start",
+      "react new my-app"
+    ],
+    "answerIndex": 0,
+    "concept": "React Setup"
+  },
+  {
+    "id": 24,
+    "question": "What does the 'children' prop represent in React?",
+    "options": [
+      "Content between component tags",
+      "Component's state",
+      "Component's parent",
+      "Component's props"
+    ],
+    "answerIndex": 0,
+    "concept": "React Props"
+  },
+  {
+    "id": 25,
+    "question": "Which method removes the last element from an array in JavaScript?",
+    "options": ["pop()", "push()", "shift()", "unshift()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 26,
+    "question": "How do you write a multi-line comment in JavaScript?",
+    "options": ["/* comment */", "// comment", "# comment", "<!-- comment -->"],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 27,
+    "question": "Which of the following is a primitive type in JavaScript?",
+    "options": ["string", "Array", "Object", "Function"],
+    "answerIndex": 0,
+    "concept": "JavaScript Types"
+  },
+  {
+    "id": 28,
+    "question": "What is the output of typeof null in JavaScript?",
+    "options": ["\"object\"", "\"null\"", "\"undefined\"", "\"number\""],
+    "answerIndex": 0,
+    "concept": "JavaScript Types"
+  },
+  {
+    "id": 29,
+    "question": "Which method is used to convert a JSON string into a JavaScript object?",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "parseJSON()",
+      "toObject()"
+    ],
+    "answerIndex": 0,
+    "concept": "JSON"
+  },
+  {
+    "id": 30,
+    "question": "What does the 'let' keyword do in JavaScript?",
+    "options": [
+      "Declares a block-scoped variable",
+      "Declares a function",
+      "Declares a constant",
+      "Declares a global variable"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 31,
+    "question": "Which of the following is NOT a valid way to declare a variable in JavaScript?",
+    "options": ["var", "let", "const", "define"],
+    "answerIndex": 3,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 32,
+    "question": "What is the purpose of the 'default' keyword in a switch statement?",
+    "options": [
+      "Specifies code to run if no case matches",
+      "Declares a default variable",
+      "Exports a default function",
+      "Imports a default module"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 33,
+    "question": "Which method is used to merge two arrays in JavaScript?",
+    "options": ["concat()", "merge()", "combine()", "append()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 34,
+    "question": "What does the '===' operator do in JavaScript?",
+    "options": [
+      "Strict equality comparison",
+      "Assignment",
+      "Loose equality comparison",
+      "Inequality comparison"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Operators"
+  },
+  {
+    "id": 35,
+    "question": "Which HTML tag is used to display an image?",
+    "options": ["<img>", "<image>", "<src>", "<picture>"],
+    "answerIndex": 0,
+    "concept": "HTML Basics"
+  },
+  {
+    "id": 36,
+    "question": "What is the correct syntax for a function component in React?",
+    "options": [
+      "function MyComponent() { return <div />; }",
+      "class MyComponent extends React.Component {}",
+      "MyComponent = () => <div />",
+      "Both A and C"
+    ],
+    "answerIndex": 3,
+    "concept": "React Components"
+  },
+  {
+    "id": 37,
+    "question": "Which hook is used to manage state in a React function component?",
+    "options": ["useState", "useEffect", "useContext", "useReducer"],
+    "answerIndex": 0,
+    "concept": "React Hooks"
+  },
+  {
+    "id": 38,
+    "question": "What does the 'return' statement do in a JavaScript function?",
+    "options": [
+      "Returns a value from the function",
+      "Declares a variable",
+      "Imports a module",
+      "Exports a function"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Functions"
+  },
+  {
+    "id": 39,
+    "question": "Which method is used to remove the first element from an array in JavaScript?",
+    "options": ["shift()", "pop()", "unshift()", "push()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 40,
+    "question": "What is the purpose of the 'useEffect' hook in React?",
+    "options": [
+      "Perform side effects in function components",
+      "Manage state",
+      "Access context",
+      "Create refs"
+    ],
+    "answerIndex": 0,
+    "concept": "React Hooks"
+  },
+  {
+    "id": 41,
+    "question": "Which CSS property changes the background color of an element?",
+    "options": [
+      "background-color",
+      "color",
+      "background-image",
+      "border-color"
+    ],
+    "answerIndex": 0,
+    "concept": "CSS Basics"
+  },
+  {
+    "id": 42,
+    "question": "What does the 'map' method do in JavaScript arrays?",
+    "options": [
+      "Creates a new array with the results of calling a function on every element",
+      "Removes elements from an array",
+      "Sorts the array",
+      "Filters the array"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 43,
+    "question": "Which HTML tag is used for the largest heading?",
+    "options": ["<h1>", "<h6>", "<header>", "<heading>"],
+    "answerIndex": 0,
+    "concept": "HTML Basics"
+  },
+  {
+    "id": 44,
+    "question": "What is the output of 2 + '2' in JavaScript?",
+    "options": ["\"22\"", "4", "NaN", "undefined"],
+    "answerIndex": 0,
+    "concept": "JavaScript Types"
+  },
+  {
+    "id": 45,
+    "question": "Which method is used to filter elements in an array in JavaScript?",
+    "options": ["filter()", "map()", "reduce()", "find()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 46,
+    "question": "What does the 'const' keyword do in JavaScript?",
+    "options": [
+      "Declares a block-scoped constant",
+      "Declares a function",
+      "Declares a variable that can be reassigned",
+      "Declares a global variable"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Syntax"
+  },
+  {
+    "id": 47,
+    "question": "Which of the following is NOT a valid JavaScript data type?",
+    "options": ["number", "string", "character", "boolean"],
+    "answerIndex": 2,
+    "concept": "JavaScript Types"
+  },
+  {
+    "id": 48,
+    "question": "What is the correct way to import React in a file?",
+    "options": [
+      "import React from 'react';",
+      "require('react');",
+      "import { React } from 'react';",
+      "import * as React from 'react';"
+    ],
+    "answerIndex": 0,
+    "concept": "React Basics"
+  },
+  {
+    "id": 49,
+    "question": "Which method is used to convert a JavaScript object to a JSON string?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "toString()",
+      "objectToJson()"
+    ],
+    "answerIndex": 0,
+    "concept": "JSON"
+  },
+  {
+    "id": 50,
+    "question": "What is the purpose of the 'props' parameter in a React component?",
+    "options": [
+      "To pass data from parent to child components",
+      "To manage state",
+      "To handle events",
+      "To define styles"
+    ],
+    "answerIndex": 0,
+    "concept": "React Props"
+  },
+  {
+    "id": 51,
+    "question": "Which CSS property is used to add space inside an element?",
+    "options": ["padding", "margin", "border", "spacing"],
+    "answerIndex": 0,
+    "concept": "CSS Basics"
+  },
+  {
+    "id": 52,
+    "question": "What does the 'reduce' method do in JavaScript arrays?",
+    "options": [
+      "Reduces the array to a single value",
+      "Removes elements from an array",
+      "Sorts the array",
+      "Filters the array"
+    ],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
+  },
+  {
+    "id": 53,
+    "question": "Which HTML tag is used to create an unordered list?",
+    "options": ["<ul>", "<ol>", "<li>", "<list>"],
+    "answerIndex": 0,
+    "concept": "HTML Basics"
+  },
+  {
+    "id": 54,
+    "question": "What is the correct way to write a CSS class selector?",
+    "options": [".myClass", "#myClass", "myClass", "*myClass"],
+    "answerIndex": 0,
+    "concept": "CSS Selectors"
+  },
+  {
+    "id": 55,
+    "question": "Which method is used to find the index of an element in an array in JavaScript?",
+    "options": ["indexOf()", "findIndex()", "find()", "search()"],
+    "answerIndex": 0,
+    "concept": "JavaScript Arrays"
   }
 ]
