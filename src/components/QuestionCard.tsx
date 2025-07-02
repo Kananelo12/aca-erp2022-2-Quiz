@@ -1,6 +1,6 @@
 import React from 'react'
 import { Question } from "../types/type"
-// import Questions from '../data/questions.json'
+import './QuestionCard.css';
 
 interface Props {
   question: Question;
@@ -12,7 +12,7 @@ interface Props {
 const QuestionCard: React.FC<Props> = ({ question, onAnswer, currentIndex, total }) => (
   <div className="card">
     <div className="card-header">
-      <span>Quiz: {total}</span>
+      <span>Quiz: </span>
       <span>{String(currentIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
     </div>
     <div className="card-body">

@@ -24,5 +24,84 @@
     "options": ["interface", "type", "class", "enum"],
     "answerIndex": 1,
     "concept": "TypeScript Types"
+  },
+  {
+    "id": 4,
+    "question": "How do you create a new branch in Git?",
+    "options": [
+      "git branch my-branch",
+      "git create my-branch",
+      "git switch -b my-branch",
+      "git init my-branch"
+    ],
+    "answerIndex": 0,
+    "concept": "Git Branching"
+  },
+  {
+    "id": 5,
+    "question": "Which method updates state in a React function component?",
+    "options": [
+      "setState()",
+      "update()",
+      "this.state=",
+      "setXXX() from useState"
+    ],
+    "answerIndex": 3,
+    "concept": "useState Hook"
+  },
+  {
+    "id": 6,
+    "question": "What command installs project dependencies from package.json?",
+    "options": ["npm install", "npm start", "npm build", "npm test"],
+    "answerIndex": 0,
+    "concept": "npm Basics"
+  },
+  {
+    "id": 7,
+    "question": "How do you import a JSON file in a TypeScript React app?",
+    "options": [
+      "import data from './data.json'",
+      "require('./data.json')",
+      "fetch('./data.json')",
+      "All of the above"
+    ],
+    "answerIndex": 0,
+    "concept": "Module Imports"
+  },
+  {
+    "id": 8,
+    "question": "Which CSS property makes text bold?",
+    "options": [
+      "font-weight: bold;",
+      "text-style: bold;",
+      "font-style: bold;",
+      "text-weight: bold;"
+    ],
+    "answerIndex": 0,
+    "concept": "CSS Basics"
+  },
+  {
+    "id": 9,
+    "question": "What does localStorage.setItem(key, value) do?",
+    "options": [
+      "Stores a value in the browser storage",
+      "Clears all storage",
+      "Retrieves a value",
+      "Deletes a key"
+    ],
+    "answerIndex": 0,
+    "concept": "Web APIs"
+  },
+  {
+    "id": 10,
+    "question": "How do you define a prop type in TypeScript for a React component?",
+    "options": [
+      "interface Props { }",
+      "type Props = { }",
+      "Both A and B",
+      "PropTypes"
+    ],
+    "answerIndex": 2,
+    "concept": "TypeScript & Props"
   }
 ]

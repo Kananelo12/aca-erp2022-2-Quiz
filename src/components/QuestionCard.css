@@ -64,6 +64,7 @@
 .option-text {
   flex: 1;
   text-align: left;
+  color: #fff;
 }
 
 @media (max-width: 600px) {
