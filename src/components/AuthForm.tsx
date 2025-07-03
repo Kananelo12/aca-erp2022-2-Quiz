@@ -7,11 +7,11 @@ type Mode = 'sign-in' | 'sign-up';
 
 export default function AuthForm({ mode }: { mode: Mode }) {
   const navigate = useNavigate();
-  const [name, setName]         = useState('');
-  const [email, setEmail]       = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading]   = useState(false);
-  const [error, setError]       = useState<string|null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string|null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
