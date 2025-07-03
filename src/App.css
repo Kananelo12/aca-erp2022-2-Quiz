@@ -14,6 +14,29 @@ body {
   flex-direction: column;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.empty-state-container {
+
+}
+.empty-state {
+  
+}
+
 @media (max-width: 600px) {
   .App {
     padding: 0.5rem;
