@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-// import questionsData from './data/questions.json';
+import emptyState from "./char.png";
 import { Question } from "./types/type";
 import "./App.css";
 import QuestionCard from "./components/QuestionCard";
 import Summary from "./components/Summary";
 import { loadQuestions } from "./firebase/crud.action";
+import ConcentricLoader from "./components/mvpblocks/concentric-loader";
 
 const STORAGE_KEY = "aca-quiz-score";
 
@@ -23,7 +24,6 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  
   const handleAnswer = (selected: number) => {
     setUserAnswers((prev) => [...prev, selected]);
     if (currentIndex + 1 < questions.length) setCurrentIndex(currentIndex + 1);
@@ -39,8 +39,23 @@ function App() {
     }
   }, [questions, showSummary, userAnswers]);
 
-  if (loading) return <div>Loading questions…</div>;
-  if (!loading && questions.length === 0) return <div>No questions found.</div>;
+  if (loading)
+    return (
+      <div className="flex-center">
+        <ConcentricLoader />
+      </div>
+    );
+
+  // const empty = true; TODO: FOR TESTING ONLY
+  // if (empty) TODO: FOR TESTING ONLY
+  if (!loading && questions.length === 0)
+    return (
+      <div className="flex-column empty-state-container">
+        <img src={emptyState} width={200} alt="empty state" />
+        <h2>No questions found.</h2>
+        <p>Please check back later or contact support.</p>
+      </div>
+    );
 
   return (
     <div className="App">
