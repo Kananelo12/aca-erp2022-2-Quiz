@@ -20,13 +20,19 @@ export default function AuthForm({ mode }: { mode: Mode }) {
 
     try {
       if (mode === 'sign-up') {
-        const result = await apiSignUp(name, email, password);
-        if (!result.success) throw new Error(result.message);
+        const result = await apiSignUp({ name, email, password });
+        if (!result.success) {
+          console.error(result.message);
+          throw new Error(result.message);
+        }
         alert(result.message); // “Account created successfully…”
         navigate('/sign-in');
       } else {
         const result = await apiSignIn(email, password);
-        if (!result.success) throw new Error(result.message || 'Sign‑in failed');
+        if (!result.success) {
+          console.error(result.message);
+          throw new Error(result.message || 'Sign‑in failed');
+        }
         // At this point, the session cookie is set, so you can fetch /api/me or go to the quiz
         navigate('/quiz');
       }

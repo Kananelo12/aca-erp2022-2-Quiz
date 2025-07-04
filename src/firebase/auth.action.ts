@@ -1,25 +1,40 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/client';
+import type { SignUpParams } from "../types/type";
 
-export async function apiSignUp(name: string, email: string, password: string) {
-  // first create user with Firebase client SDK
-  const cred = await createUserWithEmailAndPassword(auth, email, password);
-  // then call your backend
-  return fetch('https://aca-quiz-server.vercel.app/api/signup', {
-    method: 'POST',
-    credentials: 'include', // important for cookies
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ uid: cred.user.uid, name, email }),
-  }).then(r => r.json());
+
+export async function apiSignUp({ name, email, password }: SignUpParams) {
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, password);
+    console.log("\nBACKEND URL: ", process.env.REACT_APP_BACKEND_URL);
+    const res  = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/signup`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ uid: cred.user.uid, name, email }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    return res.json();
+  } catch (err: any) {
+    console.error('apiSignUp error', err);
+    return { success: false, message: err.message };
+  }
 }
 
 export async function apiSignIn(email: string, password: string) {
-  const userCred = await signInWithEmailAndPassword(auth, email, password);
-  const idToken = await userCred.user.getIdToken();
-  return fetch('https://aca-quiz-server.vercel.app/api/signin', {
-    method: 'POST',
-    credentials: 'include',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, idToken }),
-  }).then(r => r.json());
+  try {
+    const userCred = await signInWithEmailAndPassword(auth, email, password);
+    const idToken  = await userCred.user.getIdToken();
+    const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/signin`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, idToken }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    return res.json();
+  } catch (err: any) {
+    console.error('apiSignIn error', err);
+    return { success: false, message: err.message };
+  }
 }
