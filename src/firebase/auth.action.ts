@@ -4,7 +4,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../firebase/client";
-import type { SignUpParams } from "../types/type";
 
 export async function apiSignUp({ name, email, password }: SignUpParams) {
   try {
