@@ -18,23 +18,18 @@ function App() {
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [showSummary, setShowSummary] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL || ""}/api/me`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/me`, {
       credentials: "include",
     })
-      .then(res => res.json())
-      .then(user => {
-        if (!user) {
-          // with React Router:
-          navigate("/login");
-          // or without router:
-          // window.location.href = "/login";
-        }
+      .then((r) => (r.ok ? r.json() : null))
+      .then((user) => {
+        if (!user) return navigate("/sign-in");
+        setUserId(user.id);
       })
-      .catch(() => {
-        window.location.href = "/login";
-      });
+      .catch(() => navigate("/sign-in"));
   }, [navigate]);
 
   useEffect(() => {
@@ -49,6 +44,50 @@ function App() {
     if (currentIndex + 1 < questions.length) setCurrentIndex(currentIndex + 1);
     else setShowSummary(true);
   };
+
+  // when summary shows, submit to backend
+  useEffect(() => {
+    if (!showSummary || !userId) return;
+
+    const correct = userAnswers.filter(
+      (ans, idx) => ans === questions[idx].answerIndex
+    ).length;
+    const total = questions.length;
+    const pct = Math.round((correct / total) * 100);
+
+    // creative message
+    let message = "Keep practicing!";
+    if (pct === 100) message = "Outstanding! Perfect score!";
+    else if (pct >= 80) message = "Great job!";
+    else if (pct >= 50) message = "You did okay.";
+
+    console.log("\nSubmitting score:", {
+      userId,
+      score: correct,
+      total,
+      message,
+      timestamp: Date.now(),
+    });
+
+    console.log("\nBACKEND URL", process.env.REACT_APP_BACKEND_URL);
+
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/submit-quiz`, {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId,
+        score: correct,
+        total,
+        timestamp: Date.now(),
+        message,
+      }),
+    })
+      .then((res) => {
+        if (!res.ok) console.error("Submit failed:", res.statusText);
+      })
+      .catch((err) => console.error("Submit error:", err));
+  }, [showSummary, userId, userAnswers, questions]);
 
   useEffect(() => {
     if (showSummary) {

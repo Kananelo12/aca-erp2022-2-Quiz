@@ -1,0 +1,84 @@
+/* src/pages/UserSummary.css */
+
+.us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 64px); /* minus header */
+  background: #121622;
+}
+
+.us-card {
+  background: #1f2739;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.us-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.us-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+}
+
+.us-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.us-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.us-label {
+  font-weight: 500;
+}
+
+.us-value {
+  font-weight: 700;
+  color: #3399ff;
+}
+
+.us-message {
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #7acdff;
+}
+
+.us-loading,
+.us-noattempt {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .us-card {
+    padding: 1rem;
+  }
+  .us-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .us-message {
+    font-size: 1rem;
+  }
+}

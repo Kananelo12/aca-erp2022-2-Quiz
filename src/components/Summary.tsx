@@ -29,7 +29,7 @@ const Summary: React.FC<Props> = ({ questions, userAnswers }) => {
 
       <div className="summaryList">
         {questions.map((q, i) => (
-          <div key={q.id} className="summaryItem">
+          <div key={q.id || i} className="summaryItem">
             <p>
               <strong>Q{i + 1}:</strong> {q.question}
             </p>

@@ -22,3 +22,9 @@ export interface SignInParams {
   email: string;
   idToken: string;
 }
+
+export interface Leader {
+  id: string;
+  name: string;
+  score: number;
+}

@@ -65,8 +65,8 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
           Rank
         </Link>
         <Link
-          to="/summary"
-          className={location.pathname === '/summary' ? 'nav-item active' : 'nav-item'}
+          to="/usersummary"
+          className={location.pathname === '/usersummary' ? 'nav-item active' : 'nav-item'}
         >
           Summary
         </Link>

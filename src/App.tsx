@@ -10,8 +10,8 @@ import QuizApp from './QuizApp';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Header from './components/Header';
-import RankPage from './components/RankPage';
-import UserSummary from './components/UserSummary';
+import RankPage from './pages/RankPage';
+import UserSummary from './pages/UserSummary';
 
 function AppWrapper() {
   const location = useLocation();
@@ -49,7 +49,7 @@ function AppWrapper() {
           element={user ? <QuizApp /> : <Navigate to="/sign-in" replace />}
         />
         <Route path="/rank"    element={user ? <RankPage />   : <Navigate to="/sign-in" replace />} />
-        <Route path="/summary" element={user ? <UserSummary />: <Navigate to="/sign-in" replace />} />
+        <Route path="/usersummary" element={user ? <UserSummary />: <Navigate to="/sign-in" replace />} />
         {/* other protected routes */}
         <Route path="*" element={<Navigate to={user ? '/quiz' : '/sign-in'} replace />} />
       </Routes>
