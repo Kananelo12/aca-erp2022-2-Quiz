@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';      // or your router of choice
 
 type Mode = 'sign-in' | 'sign-up';
 
-export default function AuthForm({ mode }: { mode: Mode }) {
+export default function AuthForm({ mode, setUser }: { mode: Mode; setUser?: (user: any) => void }) {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string|null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +33,9 @@ export default function AuthForm({ mode }: { mode: Mode }) {
           console.error(result.message);
           throw new Error(result.message || 'Sign‑in failed');
         }
-        // At this point, the session cookie is set, so you can fetch /api/me or go to the quiz
+
+        // <- set the fresh user
+        setUser?.(result.user); // <-- Optional chaining prevents issues if undefined
         navigate('/quiz');
       }
     } catch (err: any) {

@@ -1,0 +1,111 @@
+/* src/components/Header.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f2739;
+  padding: 0.5rem 1rem;
+  color: #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left .logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+.logo-accent {
+  color: #3399ff;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #272f45;
+}
+
+.header-right {
+  position: relative;
+}
+
+.avatar-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.avatar-initials {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #3399ff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.avatar-menu {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  background: #272f45;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  min-width: 160px;
+}
+
+.avatar-menu-user {
+  padding: 0.5rem;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.avatar-menu-signout {
+  width: 100%;
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.avatar-menu-signout:hover {
+  background: #e04444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header-nav {
+    display: none; /* you could implement a hamburger menu here */
+  }
+}
