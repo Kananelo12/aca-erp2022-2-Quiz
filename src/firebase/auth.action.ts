@@ -1,3 +1,4 @@
+// TODO: LOCAL DEVELOPMENT WORKING ON SIGNIN AND SIGNUP AT TIMESTAMP: 2025-07-04: 04:50AM 
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/client';
 import type { SignUpParams } from "../types/type";
